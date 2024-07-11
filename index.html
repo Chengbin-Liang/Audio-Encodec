@@ -21,13 +21,14 @@
             table, thead, tbody, th, td, tr {
                 display: block;
             }
-            th {
+            thead tr {
                 position: absolute;
                 top: -9999px;
                 left: -9999px;
             }
             tr {
                 border: 1px solid #ccc;
+                margin-bottom: 10px;
             }
             td {
                 border: none;
@@ -44,9 +45,11 @@
                 padding-right: 10px;
                 white-space: nowrap;
             }
-            td:nth-of-type(1):before { content: "Model"; }
-            td:nth-of-type(2):before { content: "Male"; }
-            td:nth-of-type(3):before { content: "Male"; }
+            td:nth-of-type(1):before { content: "Input"; }
+            td:nth-of-type(2):before { content: "AudioDec 3.4kbps"; }
+            td:nth-of-type(3):before { content: "AudioDec 1.9kbps"; }
+            td:nth-of-type(4):before { content: "AudioDec 1.1kbps"; }
+            td:nth-of-type(5):before { content: "Codec2 0.7kbps"; }
         }
     </style>
 </head>
@@ -55,36 +58,27 @@
     <table>
         <thead>
             <tr>
-                <th> Model </th>
-                <th> Male </th>
-                <th> Female </th>
+                <th>Input</th>
+                <th>AudioDec 3.4kbps</th>
+                <th>AudioDec 1.9kbps</th>
+                <th>AudioDec 1.1kbps</th>
+                <th>Codec2 0.7kbps</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>input</td>
                 <td><audio controls><source src="wav/cn_male/input_cn_male.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="wav/cn_male/input_cn_female.wav" type="audio/wav"></audio></td>
-            </tr>
-            <tr>
-                <td>AudioCodec 3.4kbps</td>
-                <td><audio controls><source src="wav/cn_male/output_cn_male_34.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="wav/cn_male/output_cn_female_34.wav" type="audio/wav"></audio></td>
-            </tr>
-            <tr>
-                <td>AudioCodec 1.9kbps</td>
+                <td><audio controls><source src="wav/cn_male/output_cn_male_11.wav" type="audio/wav"></audio></td>
                 <td><audio controls><source src="wav/cn_male/output_cn_male_19.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="wav/cn_male/output_cn_female_19.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="wav/cn_male/output_cn_male_34.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="wav/cn_male/output_cn_male_07.wav" type="audio/wav"></audio></td>
             </tr>
             <tr>
-                <td>AudioCodec 1.1kbps</td>
-                <td><audio controls><source src="wav/cn_female/output_cn_male_11.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="wav/cn_female/input_cn_female.wav" type="audio/wav"></audio></td>
                 <td><audio controls><source src="wav/cn_female/output_cn_female_11.wav" type="audio/wav"></audio></td>
-            </tr>
-            <tr>
-                <td>Codec2 0.7kbps</td>
-                <td><audio controls><source src="wav/cn_female/output_codec_cn_male.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="wav/cn_female/output_codec_cn_female.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="wav/cn_female/output_cn_female_19.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="wav/cn_female/output_cn_female_34.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="wav/cn_female/output_cn_female_07.wav" type="audio/wav"></audio></td>
             </tr>
         </tbody>
     </table>
