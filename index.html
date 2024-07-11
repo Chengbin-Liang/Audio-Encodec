@@ -45,11 +45,13 @@
                 padding-right: 10px;
                 white-space: nowrap;
             }
-            td:nth-of-type(1):before { content: "Input"; }
-            td:nth-of-type(2):before { content: "AudioDec 3.4kbps"; }
-            td:nth-of-type(3):before { content: "AudioDec 1.9kbps"; }
-            td:nth-of-type(4):before { content: "AudioDec 1.1kbps"; }
-            td:nth-of-type(5):before { content: "Codec2 0.7kbps"; }
+            td:nth-of-type(1):before { content: "Category"; }
+            td:nth-of-type(2):before { content: "Input"; }
+            td:nth-of-type(3):before { content: "AudioDec 3.4kbps"; }
+            td:nth-of-type(4):before { content: "AudioDec 1.9kbps with vocoder"; }
+            td:nth-of-type(5):before { content: "AudioDec 1.9kbps"; }
+            td:nth-of-type(6):before { content: "AudioDec 1.1kbps"; }
+            td:nth-of-type(7):before { content: "Codec2 0.7kbps"; }
         }
     </style>
 </head>
@@ -58,6 +60,7 @@
     <table>
         <thead>
             <tr>
+                <th>Category</th>
                 <th>Input</th>
                 <th>AudioDec 3.4kbps</th>
                 <th>AudioDec 1.9kbps with vocoder</th>
@@ -68,6 +71,7 @@
         </thead>
         <tbody>
             <tr>
+                <td>Chinese male voice audio</td>
                 <td><audio controls><source src="wav/cn_male/input_cn_male.wav" type="audio/wav"></audio></td>
                 <td><audio controls><source src="wav/cn_male/output_cn_male_34.wav" type="audio/wav"></audio></td>
                 <td><audio controls><source src="wav/cn_male/output_cn_male_19v.wav" type="audio/wav"></audio></td>
@@ -76,6 +80,7 @@
                 <td><audio controls><source src="wav/cn_male/output_codec_cn_male.wav" type="audio/wav"></audio></td>
             </tr>
             <tr>
+                <td>Chinese male compressed size</td>
                 <td><a href="wav/cn_male/input_cn_male.wav" download>wav size 133KB</a></td>
                 <td><a href="wav/cn_male/output_cn_male_34.bin" download>bin size 3.56KB</a></td>
                 <td><a href="wav/cn_male/encodec_cn_male_19v.bin" download>bin size 2.00KB</a></td>
@@ -84,6 +89,7 @@
                 <td><a href="wav/cn_male/output_codec_cn_male.bin" download>bin size 0.83KB</a></td>
             </tr>
             <tr>
+                <td>Chinese female voice audio</td>
                 <td><audio controls><source src="wav/cn_female/input_cn_female.wav" type="audio/wav"></audio></td>
                 <td><audio controls><source src="wav/cn_female/output_cn_female_34.wav" type="audio/wav"></audio></td>
                 <td><audio controls><source src="wav/cn_female/output_cn_female_19v.wav" type="audio/wav"></audio></td>
@@ -92,12 +98,49 @@
                 <td><audio controls><source src="wav/cn_female/output_codec_cn_female.wav" type="audio/wav"></audio></td>
             </tr>
             <tr>
+                <td>Chinese female compressed size</td>
                 <td><a href="wav/cn_female/input_cn_female.wav" download>wav size 136KB</a></td>
                 <td><a href="wav/cn_female/output_cn_female_34.bin" download>bin size 3.64KB</a></td>
                 <td><a href="wav/cn_female/encodec_cn_female_19v.bin" download>bin size 2.05KB</a></td>
                 <td><a href="wav/cn_female/encodec_cn_female_19.bin" download>bin size 2.05KB</a></td>
                 <td><a href="wav/cn_female/encodec_cn_female_11.bin" download>bin size 1.14KB</a></td>
                 <td><a href="wav/cn_female/output_codec_cn_female.bin" download>bin size 0.85KB</a></td>
+            </tr>
+            <tr>
+                <td>English male voice audio</td>
+                <td><audio controls><source src="wav/en_male/input_en_male.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="wav/en_male/output_en_male_34.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="wav/en_male/output_en_male_19v.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="wav/en_male/output_en_male_19.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="wav/en_male/output_en_male_11.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="wav/en_male/output_codec_en_male.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td>English male compressed size</td>
+                <td><a href="wav/en_male/input_en_male.wav" download>wav size 105KB</a></td>
+                <td><a href="wav/en_male/output_en_male_34.bin" download>bin size 2.81KB</a></td>
+                <td><a href="wav/en_male/encodec_en_male_19v.bin" download>bin size 1.58KB</a></td>
+                <td><a href="wav/en_male/encodec_en_male_19.bin" download>bin size 1.58KB</a></td>
+                <td><a href="wav/en_male/encodec_en_male_11.bin" download>bin size 0.88KB</a></td>
+                <td><a href="wav/en_male/output_codec_en_male.bin" download>bin size 0.66KB</a></td>
+            </tr>
+            <tr>
+                <td>English female voice audio</td>
+                <td><audio controls><source src="wav/en_female/input_en_female.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="wav/en_female/output_en_female_34.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="wav/en_female/output_en_female_19v.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="wav/en_female/output_en_female_19.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="wav/en_female/output_en_female_11.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="wav/en_female/output_codec_en_female.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td>English female compressed size</td>
+                <td><a href="wav/en_male/input_en_male.wav" download>wav size 112KB</a></td>
+                <td><a href="wav/en_male/output_en_male_34.bin" download>bin size 3.00KB</a></td>
+                <td><a href="wav/en_male/encodec_en_male_19v.bin" download>bin size 1.68KB</a></td>
+                <td><a href="wav/en_male/encodec_en_male_19.bin" download>bin size 1.68KB</a></td>
+                <td><a href="wav/en_male/encodec_en_male_11.bin" download>bin size 0.94KB</a></td>
+                <td><a href="wav/en_male/output_codec_en_male.bin" download>bin size 0.70KB</a></td>
             </tr>
         </tbody>
     </table>
