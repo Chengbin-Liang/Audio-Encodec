@@ -17,6 +17,37 @@
         th {
             background-color: #f2f2f2;
         }
+        @media only screen and (max-width: 600px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+            th {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+            tr {
+                border: 1px solid #ccc;
+            }
+            td {
+                border: none;
+                border-bottom: 1px solid #eee;
+                position: relative;
+                padding-left: 50%;
+                text-align: left;
+            }
+            td:before {
+                position: absolute;
+                top: 6px;
+                left: 6px;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+            }
+            td:nth-of-type(1):before { content: "Row"; }
+            td:nth-of-type(2):before { content: "Input"; }
+            td:nth-of-type(3):before { content: "Output"; }
+        }
     </style>
 </head>
 <body>
@@ -31,27 +62,27 @@
         </thead>
         <tbody>
             <tr>
-                <th>1</th>
+                <td>1</td>
                 <td><audio controls><source src="wav/cn_male/input_cn_male.wav" type="audio/wav"></audio></td>
                 <td><audio controls><source src="wav/cn_male/output_cn_male_11.wav" type="audio/wav"></audio></td>
             </tr>
             <tr>
-                <th>2</th>
+                <td>2</td>
                 <td><audio controls><source src="wav/cn_male/input_cn_male.wav" type="audio/wav"></audio></td>
                 <td><audio controls><source src="wav/cn_male/output_cn_male_19.wav" type="audio/wav"></audio></td>
             </tr>
             <tr>
-                <th>3</th>
+                <td>3</td>
                 <td><audio controls><source src="wav/cn_male/input_cn_male.wav" type="audio/wav"></audio></td>
                 <td><audio controls><source src="wav/cn_male/output_cn_male_34.wav" type="audio/wav"></audio></td>
             </tr>
             <tr>
-                <th>4</th>
+                <td>4</td>
                 <td><audio controls><source src="wav/cn_female/input_cn_female.wav" type="audio/wav"></audio></td>
                 <td><audio controls><source src="wav/cn_female/output_cn_female_11.wav" type="audio/wav"></audio></td>
             </tr>
             <tr>
-                <th>5</th>
+                <td>5</td>
                 <td><audio controls><source src="wav/cn_female/input_cn_female.wav" type="audio/wav"></audio></td>
                 <td><audio controls><source src="wav/cn_female/output_cn_female_19.wav" type="audio/wav"></audio></td>
             </tr>
