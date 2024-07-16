@@ -128,7 +128,7 @@
     <h1 style="text-align: center; font-size: 2em;">Audio Files Display</h1>
     <p style="text-align: center;">测试所用音频不来自模型的训练集、验证集与测试集</p>
     
-    <table class="table1">
+    <table>
         <thead>
             <tr>
                 <th>Category</th>
@@ -152,9 +152,78 @@
                 <td><audio controls><source src="wav/cn_male/output_codec_2400_cn_male.wav" type="audio/wav"></audio></td>
                 <td><audio controls><source src="wav/cn_male/output_codec_cn_male.wav" type="audio/wav"></audio></td>
             </tr>
-            <!-- Remaining rows omitted for brevity -->
-        </tbody>
-    </table>
+        <tr>
+            <td>Chinese male audio compressed size</td>
+            <td><a href="wav/cn_male/input_cn_male.wav" download>wav size 133KB</a></td>
+            <td><a href="wav/cn_male/output_cn_male_34.bin" download>bin size 3.56KB</a></td>
+            <td><a href="wav/cn_male/encodec_cn_male_19v.bin" download>bin size 2.00KB</a></td>
+            <td><a href="wav/cn_male/encodec_cn_male_19.bin" download>bin size 2.00KB</a></td>
+            <td><a href="wav/cn_male/encodec_cn_male_12.bin" download>bin size 1.25KB</a></td>
+            <td><a href="wav/cn_male/encodec_codec_2400_cn_male.bit" download>bin size 2.50KB</a></td>
+            <td><a href="wav/cn_male/output_codec_cn_male.bit" download>bin size 0.83KB</a></td>
+        </tr>
+        <tr>
+            <td>Chinese female voice audio</td>
+            <td><audio controls><source src="wav/cn_female/input_cn_female.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="wav/cn_female/output_cn_female_34.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="wav/cn_female/output_cn_female_19v.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="wav/cn_female/output_cn_female_19.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="wav/cn_female/output_cn_female_12_v4.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="wav/cn_female/output_codec_2400_cn_female.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="wav/cn_female/output_codec_cn_female.wav" type="audio/wav"></audio></td>
+        </tr>
+        <tr>
+            <td>Chinese female audio compressed size</td>
+            <td><a href="wav/cn_female/input_cn_female.wav" download>wav size 136KB</a></td>
+            <td><a href="wav/cn_female/output_cn_female_34.bin" download>bin size 3.64KB</a></td>
+            <td><a href="wav/cn_female/encodec_cn_female_19v.bin" download>bin size 2.05KB</a></td>
+            <td><a href="wav/cn_female/encodec_cn_female_19.bin" download>bin size 2.05KB</a></td>
+            <td><a href="wav/cn_female/encodec_cn_female_12.bin" download>bin size 1.27KB</a></td>
+            <td><a href="wav/cn_female/encodec_codec_2400_cn_female.bit" download>bin size 2.54KB</a></td>
+            <td><a href="wav/cn_female/output_codec_cn_female.bit" download>bin size 0.85KB</a></td>
+        </tr>
+        <tr>
+            <td>English male voice audio</td>
+            <td><audio controls><source src="wav/en_male/input_en_male.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="wav/en_male/output_en_male_34.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="wav/en_male/output_en_male_19v.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="wav/en_male/output_en_male_19.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="wav/en_male/output_en_male_12_v4.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="wav/en_male/output_codec_2400_en_male.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="wav/en_male/output_codec_en_male.wav" type="audio/wav"></audio></td>
+        </tr>
+        <tr>
+            <td>English male audio compressed size</td>
+            <td><a href="wav/en_male/input_en_male.wav" download>wav size 105KB</a></td>
+            <td><a href="wav/en_male/output_en_male_34.bin" download>bin size 2.81KB</a></td>
+            <td><a href="wav/en_male/encodec_en_male_19v.bin" download>bin size 1.58KB</a></td>
+            <td><a href="wav/en_male/encodec_en_male_19.bin" download>bin size 1.58KB</a></td>
+            <td><a href="wav/en_male/encodec_en_male_12.bin" download>bin size 1.01KB</a></td>
+            <td><a href="wav/en_male/encodec_codec_2400_en_male.bit" download>bin size 1.96KB</a></td>
+            <td><a href="wav/en_male/output_codec_en_male.bit" download>bin size 0.66KB</a></td>
+        </tr>
+        <tr>
+            <td>English female voice audio</td>
+            <td><audio controls><source src="wav/en_female/input_en_female.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="wav/en_female/output_en_female_34.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="wav/en_female/output_en_female_19v.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="wav/en_female/output_en_female_19.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="wav/en_female/output_en_female_12_v4.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="wav/en_female/output_codec_2400_en_female.wav" type="audio/wav"></audio></td>
+            <td><audio controls><source src="wav/en_female/output_codec_en_female.wav" type="audio/wav"></audio></td>
+        </tr>
+        <tr>
+            <td>English female audio compressed size</td>
+            <td><a href="wav/en_male/input_en_female.wav" download>wav size 112KB</a></td>
+            <td><a href="wav/en_male/output_en_female_34.bin" download>bin size 3.00KB</a></td>
+            <td><a href="wav/en_male/encodec_en_female_19v.bin" download>bin size 1.68KB</a></td>
+            <td><a href="wav/en_male/encodec_en_female_19.bin" download>bin size 1.68KB</a></td>
+            <td><a href="wav/en_male/encodec_en_female_12.bin" download>bin size 1.05KB</a></td>
+            <td><a href="wav/en_male/encodec_codec_2400_en_female.bit" download>bin size 2.10KB</a></td>
+            <td><a href="wav/en_male/output_codec_en_female.bin" download>bin size 0.70KB</a></td>
+        </tr>
+    </tbody>
+</table>
 
     <h2 class="table-title">AudioDec 1.2kbps效果：中文话音</h2>
     <table class="table2">
