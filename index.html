@@ -59,9 +59,11 @@
                 display: block;
                 overflow-x: auto;
                 white-space: nowrap;
+                margin: 20px auto;
             }
             th, td {
                 white-space: nowrap;
+                text-align: center;
             }
         }
     </style>
@@ -69,8 +71,8 @@
 <body>
     <h1 style="text-align: center; font-size: 2em;">Audio Files Display</h1>
     <p style="text-align: center;">测试所用音频不来自模型的训练集、验证集与测试集</p>
-    
-        <table>
+
+    <table class="table1" style="margin: 0 auto;">
         <thead>
             <tr>
                 <th>Category</th>
@@ -165,10 +167,10 @@
             <td><a href="wav/en_male/output_codec_en_female.bin" download>bin size 0.70KB</a></td>
         </tr>
     </tbody>
-</table>
-
+    </table>
+    
     <h2 class="table-title">AudioDec 1.2kbps效果：中文话音</h2>
-    <table class="table2">
+    <table class="table2" style="margin: 0 auto;">
         <thead>
             <tr>
                 <th>Category</th>
@@ -220,8 +222,8 @@
         </tbody>
     </table>
 
-    <h2 class="table-title">Second 4x7 Table</h2>
-    <table class="table3">
+    <h2 class="table-title">AudioDec 1.2kbps效果：英文话音</h2>
+    <table class="table3" style="margin: 0 auto;">
         <thead>
             <tr>
                 <th>Category</th>
@@ -273,79 +275,5 @@
         </tbody>
     </table>
 
-    <div class="images-section">
-        <h2>Additional Images</h2>
-        <p>Below are additional images related to our audio processing results. These images provide visual representations of various data and analysis.</p>
-        <div class="image-row">
-            <div class="image-column">
-                <div class="title">(a) input_cn_male.wav waveform</div>
-                <img src="figure/input_cn_male.wav_waveform.png" alt="Image 1" width="750" height="300">
-            </div>
-            <div class="image-column">
-                <div class="title">(b) input_cn_male.wav melspectrogram</div>
-                <img src="figure/input_cn_male.wav_melspectrogram.png" alt="Image 2" width="750" height="300">
-            </div>
-        </div>
-        <div class="image-row">
-            <div class="image-column">
-                <div class="title">(c) output_cn_male_34.wav waveform</div>
-                <img src="figure/output_cn_male_34.wav_waveform.png" alt="Image 3" width="750" height="300">
-            </div>
-            <div class="image-column">
-                <div class="title">(d) output_cn_male_34.wav melspectrogram</div>
-                <img src="figure/output_cn_male_34.wav_melspectrogram.png" alt="Image 4" width="750" height="300">
-            </div>
-        </div>
-        <div class="image-row">
-            <div class="image-column">
-                <div class="title">(e) output_cn_male_19v.wav waveform</div>
-                <img src="figure/output_cn_male_19v.wav_waveform.png" alt="Image 5" width="750" height="300">
-            </div>
-            <div class="image-column">
-                <div class="title">(f) output_cn_male_19v.wav melspectrogram</div>
-                <img src="figure/output_cn_male_19v.wav_melspectrogram.png" alt="Image 6" width="750" height="300">
-            </div>
-        </div>
-        <div class="image-row">
-            <div class="image-column">
-                <div class="title">(g) output_cn_male_19.wav waveform</div>
-                <img src="figure/output_cn_male_19.wav_waveform.png" alt="Image 7" width="750" height="300">
-            </div>
-            <div class="image-column">
-                <div class="title">(h) output_cn_male_19.wav melspectrogram</div>
-                <img src="figure/output_cn_male_19.wav_melspectrogram.png" alt="Image 8" width="750" height="300">
-            </div>
-        </div>
-        <div class="image-row">
-            <div class="image-column">
-                <div class="title">(i) output_cn_male_11.wav waveform</div>
-                <img src="figure/output_cn_male_11.wav_waveform.png" alt="Image 9" width="750" height="300">
-            </div>
-            <div class="image-column">
-                <div class="title">(j) output_cn_male_11.wav melspectrogram</div>
-                <img src="figure/output_cn_male_11.wav_melspectrogram.png" alt="Image 10" width="750" height="300">
-            </div>
-        </div>
-        <div class="image-row">
-            <div class="image-column">
-                <div class="title">(k) output_codec_2400_cn_male.wav waveform</div>
-                <img src="figure/output_codec_2400_cn_male.wav_waveform.png" alt="Image 11" width="750" height="300">
-            </div>
-            <div class="image-column">
-                <div class="title">(l) output_codec_2400_cn_male.wav melspectrogram</div>
-                <img src="figure/output_codec_2400_cn_male.wav_melspectrogram.png" alt="Image 12" width="750" height="300">
-            </div>
-        </div>
-        <div class="image-row">
-            <div class="image-column">
-                <div class="title">(m) output_codec_700_cn_male.wav waveform</div>
-                <img src="figure/output_codec_cn_male.wav_waveform.png" alt="Image 11" width="750" height="300">
-            </div>
-            <div class="image-column">
-                <div class="title">(n) output_codec_700_cn_male.wav melspectrogram"></div>
-                <img src="figure/output_codec_cn_male.wav_melspectrogram.png" alt="Image 12" width="750" height="300">
-            </div>
-        </div>
-    </div>
 </body>
 </html>
