@@ -8,6 +8,7 @@
         table {
             width: 100%;
             border-collapse: collapse;
+            margin: 20px auto;
         }
         th, td {
             border: 1px solid black;
@@ -50,9 +51,9 @@
             td:nth-of-type(3):before { content: "AudioDec 3.4kbps"; }
             td:nth-of-type(4):before { content: "AudioDec 1.9kbps with vocoder"; }
             td:nth-of-type(5):before { content: "AudioDec 1.9kbps"; }
-            td:nth-of-type(6):before { content: "AudioDec 1.1kbps"; }
+            td:nth-of-type(6):before { content: "AudioDec 1.2kbps"; }
             td:nth-of-type(7):before { content: "Codec2 2.4kbps"; }
-            td:nth-of-type(7):before { content: "Codec2 0.7kbps"; }
+            td:nth-of-type(8):before { content: "Codec2 0.7kbps"; }
         }
         .red-highlight {
             color: red;
@@ -78,6 +79,11 @@
         }
         .images-section .image-column img {
             margin: 0 10px;
+        }
+        .table-title {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -180,7 +186,113 @@
             </tr>
         </tbody>
     </table>
-    
+
+    <h2 class="table-title">First 4x7 Table</h2>
+    <table>
+        <thead>
+            <tr>
+                <th style="background-color: #e0e0e0;">Category</th>
+                <th>Audio 1</th>
+                <th>Audio 2</th>
+                <th>Audio 3</th>
+                <th>Audio 4</th>
+                <th>Audio 5</th>
+                <th>Audio 6</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ground Truth</td>
+                <td><audio controls><source src="path/to/audio1.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio2.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio3.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio4.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio5.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio6.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td>AudioDec 1.2kbps</td>
+                <td><audio controls><source src="path/to/audio7.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio8.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio9.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio10.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio11.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio12.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td>Codec2 1.2kbps</td>
+                <td><audio controls><source src="path/to/audio13.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio14.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio15.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio16.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio17.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio18.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td>Codec2 0.7kbps</td>
+                <td><audio controls><source src="path/to/audio19.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio20.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio21.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio22.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio23.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio24.wav" type="audio/wav"></audio></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 class="table-title">Second 4x7 Table</h2>
+    <table>
+        <thead>
+            <tr>
+                <th style="background-color: #e0e0e0;">Category</th>
+                <th>Audio 1</th>
+                <th>Audio 2</th>
+                <th>Audio 3</th>
+                <th>Audio 4</th>
+                <th>Audio 5</th>
+                <th>Audio 6</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ground Truth</td>
+                <td><audio controls><source src="path/to/audio1.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio2.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio3.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio4.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio5.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio6.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td>AudioDec 1.2kbps</td>
+                <td><audio controls><source src="path/to/audio7.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio8.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio9.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio10.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio11.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio12.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td>Codec2 1.2kbps</td>
+                <td><audio controls><source src="path/to/audio13.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio14.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio15.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio16.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio17.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio18.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <td>Codec2 0.7kbps</td>
+                <td><audio controls><source src="path/to/audio19.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio20.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio21.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio22.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio23.wav" type="audio/wav"></audio></td>
+                <td><audio controls><source src="path/to/audio24.wav" type="audio/wav"></audio></td>
+            </tr>
+        </tbody>
+    </table>
+
     <div class="images-section">
         <h2>Additional Images</h2>
         <p>Below are additional images related to our audio processing results. These images provide visual representations of various data and analysis.</p>
