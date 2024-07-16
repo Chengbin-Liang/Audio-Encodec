@@ -22,7 +22,7 @@
             background-color: #fffacd; /* 浅黄色 */
         }
         @media only screen and (max-width: 600px) {
-            table, thead, tbody, th, td, tr {
+            .table1, .table1 thead, .table1 tbody, .table1 th, .table1 td, .table1 tr {
                 display: block;
             }
             .table1 thead tr {
@@ -57,41 +57,37 @@
             .table1 td:nth-of-type(6):before { content: "AudioDec 1.2kbps"; }
             .table1 td:nth-of-type(7):before { content: "Codec2 2.4kbps"; }
             .table1 td:nth-of-type(8):before { content: "Codec2 0.7kbps"; }
-            
-            .table2 tr {
-                margin-bottom: 20px;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            .table2, .table3 {
+                display: block;
+            }
+            .table2 thead, .table3 thead {
+                display: none;
+            }
+            .table2 tbody tr, .table3 tbody tr {
+                display: flex;
+                flex-direction: column;
                 border: 1px solid #ccc;
+                margin-bottom: 10px;
             }
             .table2 td, .table3 td {
+                display: flex;
+                justify-content: space-between;
                 border: none;
                 border-bottom: 1px solid #eee;
-                position: relative;
-                text-align: left;
                 padding-left: 50%;
+                text-align: left;
             }
             .table2 td:before, .table3 td:before {
-                position: absolute;
-                top: 6px;
-                left: 6px;
-                width: 45%;
+                content: attr(data-label);
+                flex-basis: 45%;
                 padding-right: 10px;
                 white-space: nowrap;
             }
-            .table2 td:nth-of-type(1):before { content: "Category"; }
-            .table2 td:nth-of-type(2):before { content: "Audio 1"; }
-            .table2 td:nth-of-type(3):before { content: "Audio 2"; }
-            .table2 td:nth-of-type(4):before { content: "Audio 3"; }
-            .table2 td:nth-of-type(5):before { content: "Audio 4"; }
-            .table2 td:nth-of-type(6):before { content: "Audio 5"; }
-            .table2 td:nth-of-type(7):before { content: "Audio 6"; }
-            .table3 td:nth-of-type(1):before { content: "Category"; }
-            .table3 td:nth-of-type(2):before { content: "Audio 1"; }
-            .table3 td:nth-of-type(3):before { content: "Audio 2"; }
-            .table3 td:nth-of-type(4):before { content: "Audio 3"; }
-            .table3 td:nth-of-type(5):before { content: "Audio 4"; }
-            .table3 td:nth-of-type(6):before { content: "Audio 5"; }
-            .table3 td:nth-of-type(7):before { content: "Audio 6"; }
         }
+
         .red-highlight {
             color: red;
         }
@@ -240,45 +236,45 @@
         </thead>
         <tbody>
             <tr class="highlight">
-                <td>Ground Truth</td>
-                <td><audio controls><source src="figure/show_v12/cn/20170001P00008I0026.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/cn/20170001P00031I0081.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/cn/20170001P00119A0111.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/cn/20170001P00139I0119.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/cn/20170001P00193A0014.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/cn/20170001P00328A0120.wav" type="audio/wav"></audio></td>
+                <td data-label="Category">Ground Truth</td>
+                <td data-label="Audio 1"><audio controls><source src="figure/show_v12/cn/20170001P00008I0026.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 2"><audio controls><source src="figure/show_v12/cn/20170001P00031I0081.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 3"><audio controls><source src="figure/show_v12/cn/20170001P00119A0111.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 4"><audio controls><source src="figure/show_v12/cn/20170001P00139I0119.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 5"><audio controls><source src="figure/show_v12/cn/20170001P00193A0014.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 6"><audio controls><source src="figure/show_v12/cn/20170001P00328A0120.wav" type="audio/wav"></audio></td>
             </tr>
             <tr>
-                <td>AudioDec 1.2kbps</td>
-                <td><audio controls><source src="figure/show_v12/cn/20170001P00008I0026_libritts_12_v8.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/cn/20170001P00031I0081_libritts_12_v8.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/cn/20170001P00119A0111_libritts_12_v8.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/cn/20170001P00139I0119_libritts_12_v8.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/cn/20170001P00193A0014_libritts_12_v8.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/cn/20170001P00328A0120_libritts_12_v8.wav" type="audio/wav"></audio></td>
+                <td data-label="Category">AudioDec 1.2kbps</td>
+                <td data-label="Audio 1"><audio controls><source src="figure/show_v12/cn/20170001P00008I0026_libritts_12_v8.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 2"><audio controls><source src="figure/show_v12/cn/20170001P00031I0081_libritts_12_v8.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 3"><audio controls><source src="figure/show_v12/cn/20170001P00119A0111_libritts_12_v8.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 4"><audio controls><source src="figure/show_v12/cn/20170001P00139I0119_libritts_12_v8.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 5"><audio controls><source src="figure/show_v12/cn/20170001P00193A0014_libritts_12_v8.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 6"><audio controls><source src="figure/show_v12/cn/20170001P00328A0120_libritts_12_v8.wav" type="audio/wav"></audio></td>
             </tr>
             <tr>
-                <td>Codec2 1.2kbps</td>
-                <td><audio controls><source src="figure/show_v12/cn/20170001P00008I0026_codec_700C.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/cn/20170001P00008I0026_codec_700C.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/cn/20170001P00008I0026_codec_700C.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/cn/20170001P00008I0026_codec_700C.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/cn/20170001P00008I0026_codec_700C.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/cn/20170001P00008I0026_codec_700C.wav" type="audio/wav"></audio></td>
+                <td data-label="Category">Codec2 1.2kbps</td>
+                <td data-label="Audio 1"><audio controls><source src="figure/show_v12/cn/20170001P00008I0026_codec_700C.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 2"><audio controls><source src="figure/show_v12/cn/20170001P00031I0081_codec_700C.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 3"><audio controls><source src="figure/show_v12/cn/20170001P00119A0111_codec_700C.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 4"><audio controls><source src="figure/show_v12/cn/20170001P00139I0119_codec_700C.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 5"><audio controls><source src="figure/show_v12/cn/20170001P00193A0014_codec_700C.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 6"><audio controls><source src="figure/show_v12/cn/20170001P00328A0120_codec_700C.wav" type="audio/wav"></audio></td>
             </tr>
             <tr>
-                <td>Codec2 0.7kbps</td>
-                <td><audio controls><source src="figure/show_v12/cn/20170001P00008I0026_codec_1200.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/cn/20170001P00008I0026_codec_700C.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/cn/20170001P00008I0026_codec_700C.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/cn/20170001P00008I0026_codec_700C.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/cn/20170001P00008I0026_codec_700C.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/cn/20170001P00008I0026_codec_700C.wav" type="audio/wav"></audio></td>
+                <td data-label="Category">Codec2 0.7kbps</td>
+                <td data-label="Audio 1"><audio controls><source src="figure/show_v12/cn/20170001P00008I0026_codec_1200.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 2"><audio controls><source src="figure/show_v12/cn/20170001P00031I0081_codec_1200.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 3"><audio controls><source src="figure/show_v12/cn/20170001P00119A0111_codec_1200.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 4"><audio controls><source src="figure/show_v12/cn/20170001P00139I0119_codec_1200.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 5"><audio controls><source src="figure/show_v12/cn/20170001P00193A0014_codec_1200.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 6"><audio controls><source src="figure/show_v12/cn/20170001P00328A0120_codec_1200.wav" type="audio/wav"></audio></td>
             </tr>
         </tbody>
     </table>
 
-    <h2 class="table-title">AudioDec 1.2kbps效果：英文话音</h2>
+    <h2 class="table-title">Second 4x7 Table</h2>
     <table class="table3">
         <thead>
             <tr>
@@ -293,40 +289,40 @@
         </thead>
         <tbody>
             <tr class="highlight">
-                <td>Ground Truth</td>
-                <td><audio controls><source src="figure/show_v12/en/p228_014.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/en/p256_014.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/en/p259_024.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/en/p270_018.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/en/p306_009.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/en/p333_022.wav" type="audio/wav"></audio></td>
+                <td data-label="Category">Ground Truth</td>
+                <td data-label="Audio 1"><audio controls><source src="figure/show_v12/en/p228_014.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 2"><audio controls><source src="figure/show_v12/en/p256_014.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 3"><audio controls><source src="figure/show_v12/en/p259_024.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 4"><audio controls><source src="figure/show_v12/en/p270_018.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 5"><audio controls><source src="figure/show_v12/en/p306_009.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 6"><audio controls><source src="figure/show_v12/en/p333_022.wav" type="audio/wav"></audio></td>
             </tr>
             <tr>
-                <td>AudioDec 1.2kbps</td>
-                <td><audio controls><source src="figure/show_v12/en/p228_014_libritts_12_v8.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/en/p256_014_libritts_12_v8.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/en/p259_024_libritts_12_v8.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/en/p270_018_libritts_12_v8.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/en/p306_009_libritts_12_v8.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/en/p333_022_libritts_12_v8.wav" type="audio/wav"></audio></td>
+                <td data-label="Category">AudioDec 1.2kbps</td>
+                <td data-label="Audio 1"><audio controls><source src="figure/show_v12/en/p228_014_libritts_12_v8.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 2"><audio controls><source src="figure/show_v12/en/p256_014_libritts_12_v8.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 3"><audio controls><source src="figure/show_v12/en/p259_024_libritts_12_v8.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 4"><audio controls><source src="figure/show_v12/en/p270_018_libritts_12_v8.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 5"><audio controls><source src="figure/show_v12/en/p306_009_libritts_12_v8.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 6"><audio controls><source src="figure/show_v12/en/p333_022_libritts_12_v8.wav" type="audio/wav"></audio></td>
             </tr>
             <tr>
-                <td>Codec2 1.2kbps</td>
-                <td><audio controls><source src="figure/show_v12/en/p228_014_codec_1200.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/en/p256_014_codec_1200.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/en/p259_024_codec_1200.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/en/p270_018_codec_1200.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/en/p306_009_codec_1200.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/en/p333_022_codec_1200.wav" type="audio/wav"></audio></td>
+                <td data-label="Category">Codec2 1.2kbps</td>
+                <td data-label="Audio 1"><audio controls><source src="figure/show_v12/en/p228_014_codec_1200.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 2"><audio controls><source src="figure/show_v12/en/p256_014_codec_1200.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 3"><audio controls><source src="figure/show_v12/en/p259_024_codec_1200.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 4"><audio controls><source src="figure/show_v12/en/p270_018_codec_1200.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 5"><audio controls><source src="figure/show_v12/en/p306_009_codec_1200.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 6"><audio controls><source src="figure/show_v12/en/p333_022_codec_1200.wav" type="audio/wav"></audio></td>
             </tr>
             <tr>
-                <td>Codec2 0.7kbps</td>
-                <td><audio controls><source src="figure/show_v12/en/p228_014_codec_700c.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/en/p256_014_codec_700c.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/en/p259_024_codec_700c.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/en/p270_018_codec_700c.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/en/p306_009_codec_700c.wav" type="audio/wav"></audio></td>
-                <td><audio controls><source src="figure/show_v12/en/p333_022_codec_700c.wav" type="audio/wav"></audio></td>
+                <td data-label="Category">Codec2 0.7kbps</td>
+                <td data-label="Audio 1"><audio controls><source src="figure/show_v12/en/p228_014_codec_700c.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 2"><audio controls><source src="figure/show_v12/en/p256_014_codec_700c.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 3"><audio controls><source src="figure/show_v12/en/p259_024_codec_700c.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 4"><audio controls><source src="figure/show_v12/en/p270_018_codec_700c.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 5"><audio controls><source src="figure/show_v12/en/p306_009_codec_700c.wav" type="audio/wav"></audio></td>
+                <td data-label="Audio 6"><audio controls><source src="figure/show_v12/en/p333_022_codec_700c.wav" type="audio/wav"></audio></td>
             </tr>
         </tbody>
     </table>
@@ -406,4 +402,6 @@
         </div>
     </div>
 </body>
+</html>
+
 </html>
