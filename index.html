@@ -18,6 +18,9 @@
         th {
             background-color: #f2f2f2;
         }
+        .highlight {
+            background-color: #e0e0e0;
+        }
         @media only screen and (max-width: 600px) {
             table, thead, tbody, th, td, tr {
                 display: block;
@@ -187,11 +190,11 @@
         </tbody>
     </table>
 
-    <h2 class="table-title">First 4x7 Table</h2>
+    <h2 class="table-title">中文话音</h2>
     <table>
         <thead>
             <tr>
-                <th style="background-color: #e0e0e0;">Category</th>
+                <th>Category</th>
                 <th>Audio 1</th>
                 <th>Audio 2</th>
                 <th>Audio 3</th>
@@ -201,7 +204,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
+            <tr class="highlight">
                 <td>Ground Truth</td>
                 <td><audio controls><source src="path/to/audio1.wav" type="audio/wav"></audio></td>
                 <td><audio controls><source src="path/to/audio2.wav" type="audio/wav"></audio></td>
@@ -244,7 +247,7 @@
     <table>
         <thead>
             <tr>
-                <th style="background-color: #e0e0e0;">Category</th>
+                <th>Category</th>
                 <th>Audio 1</th>
                 <th>Audio 2</th>
                 <th>Audio 3</th>
@@ -254,7 +257,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
+            <tr class="highlight">
                 <td>Ground Truth</td>
                 <td><audio controls><source src="path/to/audio1.wav" type="audio/wav"></audio></td>
                 <td><audio controls><source src="path/to/audio2.wav" type="audio/wav"></audio></td>
